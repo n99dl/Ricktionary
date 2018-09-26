@@ -33,4 +33,7 @@ public class Word {
     public void setId(int id) {
         this.id = id;
     }
+    public void print(){
+        System.out.println(this.id + "   " + this.word_target + "  " + this.word_explaint);
+    }
 }
