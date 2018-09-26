@@ -22,7 +22,9 @@ public class Trie {
         treeRoot = new Node();
     }
 
-    public void insertToTree(String word, int wordID) {
+    public void insertToTree(Word thisWord) {
+        String word = thisWord.getWord_target();
+        int wordID = thisWord.getId();
         Node tree = treeRoot;
         for (int i = 0; i < word.length(); i++) {
             int charToInt = word.charAt(i) - 'a';
