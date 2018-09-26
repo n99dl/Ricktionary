@@ -23,7 +23,7 @@ public class Trie {
     }
 
     public void insertToTree(Word thisWord) {
-        String word = thisWord.getWord_target();
+        String word = thisWord.getWord_target().toLowerCase();
         int wordID = thisWord.getId();
         Node tree = treeRoot;
         for (int i = 0; i < word.length(); i++) {
