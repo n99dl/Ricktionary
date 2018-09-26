@@ -34,6 +34,13 @@ public class DictionaryManagement {
         }catch (FileNotFoundException e) {
         }
     }
+    public void dictionaryLookup(){
+        String keyWord;
+        Scanner scanner = new Scanner(System.in);
+        keyWord = scanner.nextLine();
+        Word word = dictionary.lookupWord(keyWord);
+        word.print();
+    }
     public ArrayList<Word> getWordList(){
         return dictionary.getWordList();
     }
