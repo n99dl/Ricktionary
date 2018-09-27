@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 public class Trie {
     private static final int ALPHABET_SIZE = 26;
+    private int vocabNum = 0;
 
     static class Node {
         public Node[] children;
@@ -22,6 +23,10 @@ public class Trie {
         treeRoot = new Node();
     }
 
+    public int getVocabNum(){
+        return this.vocabNum;
+    }
+
     public void insertToTree(Word thisWord) {
         String word = thisWord.getWord_target().toLowerCase();
         Node tree = treeRoot;
@@ -32,36 +37,104 @@ public class Trie {
             }
             tree = tree.children[charToInt];
         }
+        if(tree.containID == null){
+            this.vocabNum += 1;
+        }
         tree.containID = thisWord;
     }
 
-    public class FindMore {
+    /**
+     * Remove From Tree
+     */
+    private boolean isLeafNode(Node node) {
+        return (node.containID != null);
+    }
 
-        public ArrayList<Word> commonPrefix(Node curNode, int maxNext) {
-            ArrayList<Word> results = new ArrayList<>();
-            Queue<Node> q = new LinkedList<>();
-            q.add(curNode);
-            while (q.size() > 0) {
-                Node topQueue = q.remove();
-                if (topQueue.containID != null) {
-                    results.add(topQueue.containID);
-                    maxNext = maxNext - 1;
-                    if (maxNext == 0) {
-                        break;
+    private boolean isFreeNode(Node node) {
+        for (int i = 0; i < this.ALPHABET_SIZE; i++) {
+            if (node.children[i] != null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean removeHelper(Node node, String word, int level, int len) {
+        if (node != null) {
+            if (level == len) { // Base case
+                if (node.containID != null) {
+                    node.containID = null;
+                    if (isFreeNode(node)) {
+                        return true;
                     }
+                    return false;
                 }
-                for (int i = 0; i < Trie.ALPHABET_SIZE; i++) {
-                    if (topQueue.children[i] != null) {
-                        q.add(topQueue.children[i]);
-                    }
+            } else {
+                int charToInt = word.charAt(level) - 'a';
+                if (removeHelper(node.children[charToInt], word, level + 1, len)) {
+                    node.children[charToInt] = null;
+                    return (!isLeafNode(node) && isFreeNode(node));
                 }
             }
-            return results;
+        }
+        return false;
+    }
+
+    public void removeFromTree(String word) {
+        word = word.toLowerCase();
+        if(this.searchInTree(word, 1) != null){
+            this.vocabNum -= 1;
+        }
+        int len = word.length();
+        if (len > 0) {
+            removeHelper(treeRoot, word, 0, len);
+        }
+    }
+
+    private class FindMore {
+        ArrayList<Word> results;
+
+        public FindMore(){
+            results = new ArrayList<>();
+        }
+
+        private void getWord(Node node){
+            if(node.containID != null){
+                results.add(node.containID);
+            }
+            for (int i = 0; i < Trie.ALPHABET_SIZE; i++) {
+                if (node.children[i] != null) {
+                    getWord(node.children[i]);
+                }
+            }
+        }
+
+        public ArrayList<Word> commonPrefix(Node curNode, int maxNext) {
+            getWord(curNode);
+            ArrayList<Word> trimmedRes = new ArrayList<>();
+            for(Word word : results){
+                trimmedRes.add(word);
+                maxNext -= 1;
+                if(maxNext == 0){
+                    break;
+                }
+            }
+            return trimmedRes;
         }
 
     }
 
+    /**
+     * Get All the Words From Tree
+     */
+    public ArrayList<Word> getAllWords() {
+        FindMore getAll = new FindMore();
+        Node tree = treeRoot;
+        return getAll.commonPrefix(tree, this.vocabNum);
+    }
+
     public ArrayList<Word> searchInTree(String word, int maxNext) {
+        word = word.toLowerCase();
         ArrayList<Word> results = new ArrayList<>();
         Node tree = treeRoot;
         boolean canFindWord = true;
