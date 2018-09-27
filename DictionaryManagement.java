@@ -3,9 +3,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class DictionaryManagement {
-    private Dictionary dictionary = new Dictionary();
+    private Dictionary dictionary;
+
+    public Dictionary(){
+        dictionary = new Dictionary();
+    }
 
     public void insertFromCommandLine() {
         int numberOfWord = 0;
@@ -23,13 +28,20 @@ public class DictionaryManagement {
 
     public void insertFromFile() {
         int i = -1;
+        ArrayList<Word> listWords = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File("dictionaries.txt"));) {
             while (scanner.hasNextLine()) {
                 i++;
                 String allLine;
                 allLine = scanner.nextLine();
                 String[] wordsArray = allLine.split("\t");
-                dictionary.insertWord(new Word(wordsArray[0], wordsArray[1], i));
+                listWords.add(new Word(wordsArray[0], wordsArray[1], i));
+            }
+            Collections.sort(listWords, new SortWords()); // Sort words
+            int count = 0; // 0-indexed
+            for(Word word : listWords){
+                word.setId(count++); // Set new ID
+                dictionary.insertWord(word); 
             }
         } catch (FileNotFoundException e) {
         }
