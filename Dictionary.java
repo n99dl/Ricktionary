@@ -2,8 +2,13 @@
 import java.util.ArrayList;
 
 public class Dictionary {
-    private Trie trie = new Trie();
-    private ArrayList<Word> wordList = new ArrayList<Word>();
+    private Trie trie;
+    private ArrayList<Word> wordList;
+
+    public Dictionary(){
+        trie = new Trie();
+        wordList = new ArrayList<>();
+    }
 
     public void insertWord(Word word) {
         trie.insertToTree(word);
