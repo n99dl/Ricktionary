@@ -7,12 +7,12 @@ public class Trie {
 
     static class Node {
         public Node[] children;
-        public int containID;
+        public Word containID;
         public int count;
 
         public Node() {
             this.children = new Node[Trie.ALPHABET_SIZE];
-            this.containID = -1;
+            this.containID = null;
         }
     }
 
@@ -24,7 +24,6 @@ public class Trie {
 
     public void insertToTree(Word thisWord) {
         String word = thisWord.getWord_target().toLowerCase();
-        int wordID = thisWord.getId();
         Node tree = treeRoot;
         for (int i = 0; i < word.length(); i++) {
             int charToInt = word.charAt(i) - 'a';
@@ -33,18 +32,18 @@ public class Trie {
             }
             tree = tree.children[charToInt];
         }
-        tree.containID = wordID;
+        tree.containID = thisWord;
     }
 
     public class FindMore {
 
-        public ArrayList<Integer> commonPrefix(Node curNode, int maxNext) {
-            ArrayList<Integer> results = new ArrayList<>();
+        public ArrayList<Word> commonPrefix(Node curNode, int maxNext) {
+            ArrayList<Word> results = new ArrayList<>();
             Queue<Node> q = new LinkedList<>();
             q.add(curNode);
             while (q.size() > 0) {
                 Node topQueue = q.remove();
-                if (topQueue.containID != -1) {
+                if (topQueue.containID != null) {
                     results.add(topQueue.containID);
                     maxNext = maxNext - 1;
                     if (maxNext == 0) {
@@ -62,8 +61,8 @@ public class Trie {
 
     }
 
-    public ArrayList<Integer> searchInTree(String word, int maxNext) {
-        ArrayList<Integer> results = new ArrayList<>();
+    public ArrayList<Word> searchInTree(String word, int maxNext) {
+        ArrayList<Word> results = new ArrayList<>();
         Node tree = treeRoot;
         boolean canFindWord = true;
         for (int i = 0; i < word.length(); i++) {
@@ -74,7 +73,7 @@ public class Trie {
             }
             tree = tree.children[charToInt];
         }
-        if (tree.containID == -1) {
+        if (tree.containID == null) {
             canFindWord = false;
         }
         if (canFindWord) {
