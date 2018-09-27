@@ -8,7 +8,7 @@ import java.util.Collections;
 public class DictionaryManagement {
     private Dictionary dictionary;
 
-    public Dictionary(){
+    public DictionaryManagement(){
         dictionary = new Dictionary();
     }
 
