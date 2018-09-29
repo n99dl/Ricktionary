@@ -10,7 +10,7 @@ public class Trie {
         public Node[] children;
         public Word containID;
         public int count;
-
+        
         public Node() {
             this.children = new Node[Trie.ALPHABET_SIZE];
             this.containID = null;
