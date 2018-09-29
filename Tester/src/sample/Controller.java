@@ -122,6 +122,7 @@ public class Controller {
                         System.out.println("Selected Text : " + item.getValue().getWord_explaint().getValue());
                         textArea.setDisable(false);
                         textArea.setText(item.getValue().getWord_explaint().getValue());
+                        textField.setText(item.getValue().getWord_target().getValue());
                     }
                 }
             }

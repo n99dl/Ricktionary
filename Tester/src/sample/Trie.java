@@ -151,9 +151,9 @@ public class Trie {
         if (tree.containID == null) {
             canFindWord = false;
         }
-        if(canFindWord == false){
-            return results;
-        }
+//        if(canFindWord == false){
+//            return results;
+//        }
         FindMore next = new FindMore();
         results = next.commonPrefix(tree, maxNext);
         return results;
