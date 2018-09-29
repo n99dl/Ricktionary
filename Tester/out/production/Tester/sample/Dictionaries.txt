@@ -1,9 +1,512 @@
-Hello	Xin Chao
-Hi	Xin Chao
-House	Ngoi Nha
-Thang	Con ***
-Bag	Cap xach
-History	Lich Su
-High	Phe
-Hope	Hy Vong
-Him	Anh i
+accent	giọng
+accented	có dấu
+accenting	nhấn mạnh
+accentless	vô tình
+accentor	accentor
+accentors	accentors
+accents	dấu trọng âm
+accentuable	có giá trị
+accentual	có giọng
+accentuality	sự chú ý
+accentually	có giọng
+accentuate	làm nổi bật
+accentuated	nhấn mạnh
+accentuates	accentuates
+accentuating	làm nổi bật
+accentuation	sự nhấn mạnh
+accentuations	sự nhấn mạnh
+accentuator	accentuator
+accentus	accentus
+accept	Chấp nhận
+acceptability	sự chấp nhận
+acceptabilities	sự chấp nhận
+acceptable	có thể chấp nhận
+accensor	accensor
+accent	giọng
+accented	có dấu
+accenting	nhấn mạnh
+accentless	vô tình
+accentor	accentor
+accentors	accentors
+accents	dấu trọng âm
+accentuable	có giá trị
+accentual	có giọng
+accentuality	sự chú ý
+accentually	có giọng
+accentuate	làm nổi bật
+accentuated	nhấn mạnh
+accentuates	accentuates
+accentuating	làm nổi bật
+accentuation	sự nhấn mạnh
+accentuations	sự nhấn mạnh
+accentuator	accentuator
+accentus	accentus
+accept	Chấp nhận
+acceptability	sự chấp nhận
+acceptabilities	sự chấp nhận
+acceptable	có thể chấp nhận
+melamines	melamines
+melammdim	melammdim
+melammed	melammed
+melampyrin	melampyrin
+melampyrite	melampyrite
+melampyritol	melampyritol
+Melampyrum	Melampyrum
+melampod	vượt qua
+melampode	vượt qua
+melampodium	melampodium
+Melampsora	Melampsora
+Melampsoraceae	Melampsoraceae
+Melampus	Melampus
+Melan	Melan
+melan-	melan-
+melanaemia	Melaminea
+melanaemic	Melanomic
+melanagogal	Melanogogle
+melanagogue	Melangougue
+melancholy	u sầu
+melancholia	u sầu
+melancholiac	melancholiac
+melancholiacs	u sầu
+peasantries	nông dân
+peasants	nông dân
+peasantship	nông dân
+peascod	peascod
+peascods	peascods
+Pease	Pease
+peasecod	peasecod
+peasecods	peasecods
+peaselike	headbands
+peasen	trêu chọc
+peases	trêu chọc
+peaseweep	peaseweep
+pea-shoot	bắn đậu
+peashooter	peashooter
+peasy	buồn rầu
+pea-sized	cỡ hạt đậu
+peason	peason
+pea-soup	súp đậu
+peasouper	chụp
+pea-souper	siêu siêu
+sidy	rậm rạp
+sidia	sidia
+Sidi-bel-Abb	Saidblb
+siding	siding
+sidings	sidings
+sidion	sidion
+Sidky	Sidky
+sidle	sidle
+sidled	ở bên
+sidler	người đi lang thang
+sidlers	sidlers
+sidles	sidles
+sidling	đi lang thang
+sidlingly	rụt rè
+sidlins	sidlins
+Sidman	Sidman
+Sidnaw	Sidnaw
+turgid	cương lên
+better-dressed	mặc quần áo tốt hơn
+bettered	tốt hơn
+betterer	tốt hơn
+bettergates	tốt hơn
+better-humored	tốt hơn
+better-informed	thông báo tốt hơn
+bettering	cải thiện
+better-knowing	biết rõ hơn
+better-known	nổi tiếng hơn
+betterly	tốt hơn
+better-liked	thích hơn
+better-liking	thích hơn
+better-meant	tốt hơn
+betterment	cải thiện
+betterments	cải thiện
+bettermost	tốt hơn hết
+better-natured	tốt hơn
+betterness	tốt hơn
+better-omened	tốt hơn
+better-principled	tốt hơn-nguyên tắc
+better-regulated	điều chỉnh tốt hơn
+betters	betters
+better-seasoned	tốt hơn
+better-taught	dạy tốt hơn
+Betterton	Betterton
+better-witted	tốt hơn
+Betthel	Bê-tên
+Betthezel	Betthezel
+Betthezul	Betthezul
+Betti	Betti
+Betty	Betty
+Bettye	Bettye
+betties	betties
+bevellers	bevellers
+bevelling	bevelling
+bevelment	bevelment
+bevels	bevels
+bevenom	beven
+Bever	Đồ uống
+beverage	đồ uống
+beverages	đồ uống
+Beveridge	Beveridge
+Beverie	Beverie
+Beverle	Đồ uống
+Beverlee	Beverlee
+Beverley	Beverley
+Beverly	Beverly
+Beverlie	Beverlie
+Bevers	Beavers
+beverse	hải ly
+bevesseled	bevesseled
+bevesselled	bevesselled
+beveto	bebe
+bevy	bevy
+Bevier	Bevier
+bevies	bevies
+bevil	bevil
+bevillain	bevillain
+bevilled	bevilled
+Bevin	Bevin
+bevined	bevined
+Bevington	Bevington
+Bevinsville	Bevinsville
+Bevis	chứng cớ
+bevoiled	bevoiled
+bevomit	bevomit
+bevomited	bevomited
+bevomiting	bevomiting
+bevomits	bevomits
+Bevon	Bevon
+bevor	trước
+bevors	bevors
+bevue	bevue
+Bevus	Bevus
+Bevvy	Bevvy
+BEW	BEW
+bewail	bewail
+bewailable	có thể được
+bewailed	bewailed
+bewailer	bewailer
+bewailers	bewailers
+bewailing	bewailing
+bewailingly	bewailingly
+bewailment	bewailment
+bewails	bewails
+bewaitered	bewaitered
+bewake	bewake
+bewall	bewall
+beware	hãy cẩn thận
+bewared	bị thương
+bewares	bewares
+bewary	bewary
+bicapsular	hình ống
+bicarb	thẻ bài
+bicarbide	bicarbide
+bicarbonate	bicarbonate
+bicarbonates	bicacbonat
+bicarbs	bicarbs
+bicarbureted	lưỡng lự
+bicarburetted	- có bicarburetted
+bicarinate	Bán
+bicarpellary	lưỡng cực
+bicarpellate	bicarpellate
+bicaudal	bicaudal
+bicaudate	bicaudate
+bicched	Tách
+Bice	Nó sẽ là
+bicellular	xe đạp
+bicentenary	hai trăm năm
+bicentenaries	bicentenaries
+bicentenarnaries	bicentenarnaries
+bicentennial	hai trăm năm
+bicentennially	lưỡng tính
+bicentennials	hai trăm tuổi
+bicentral	bicentral
+bicentric	lưỡng tính
+bicentrically	lưỡng tính
+bicentricity	tính lưỡng tính
+bicep	bicep
+bicephalic	bicephalic
+bicephalous	bicephalous
+biceps	bắp tay
+bicepses	bicepses
+bices	bices
+bicetyl	bicetyl
+by-channel	theo kênh
+Bichat	Bichat
+Bichelamar	Bichelamar
+Biche-la-mar	Biche-la-mar
+bichy	bichy
+by-child	từng đứa trẻ
+bichir	bichir
+bichloride	bichloride
+bichlorides	bichlorides
+by-chop	by-chop
+bichord	Middleman
+bichos	lỗi
+bichromate	bichromate
+bichromated	bichromated
+bichromatic	bichromatic
+bichromatize	bichromatize
+bichrome	bichrome
+bichromic	bichromic
+bicyanide	Bestseller
+bicycle	Xe đạp
+bicycle-built-for-two	xe đạp-xây dựng-cho-hai
+bicycled	đạp xe
+bicycler	người đi xe đạp
+bicyclers	người đi xe đạp
+bicycles	xe đạp
+bicyclic	lưỡng tính
+bicyclical	theo chu kỳ
+bicycling	đi xe đạp
+bicyclism	người đi xe đạp
+bicyclist	người đi xe đạp
+bicyclists	người đi xe đạp
+bicyclo	bicyclo
+bicycloheptane	bicycloheptan
+bicycular	thuộc về hình cầu
+biciliate	biciliate
+biciliated	làm bẽ mặt
+bicylindrical	bicylindrical
+bicipital	bicipital
+bicipitous	bicipitous
+bicircular	u nang
+bicirrose	bicirrose
+Bick	Bick
+Bickart	Bickart
+bicker	bicker
+bickered	bẻ cong
+bickerer	người đánh lừa
+bickerers	người bickerers
+bickering	cãi nhau
+bickern	bickern
+bickers	bickers
+bickiron	bickiron
+bick-iron	Bánh
+Bickleton	Bickleton
+Bickmore	Bickmore
+Bicknell	Bicknell
+biclavate	biclavate
+biclinia	biclinia
+biclinium	biclinium
+by-cock	NULL
+bycoket	bycoket
+Bicol	Bicol
+bicollateral	lưỡng cực
+bicollaterality	lưỡng tính
+bicolligate	bicolligate
+bicolor	bicolor
+bicolored	bicolored
+bicolorous	bicolorous
+bicolors	bicolors
+bicolour	bicolour
+bicoloured	có màu trắng
+bicolourous	bicolourous
+bicolours	bicolours
+Bicols	Xe đạp
+by-common	thông thường
+bicompact	bicompact
+biconcave	hai mặt lồi lõm
+biconcavity	biconcavity
+biconcavities	biconcavities
+bicondylar	bicondylar
+biconditional	lưỡng tính
+bicone	bicone
+biconic	NULL
+biconical	hai mặt
+biconically	hai mặt
+biconjugate	hai mặt
+biconnected	biconnected
+biconsonantal	biconsonantal
+biconvex	hai mặt lồi
+biconvexity	hai mặt lồi lõm
+biconvexities	hai mặt lồi lõm
+Bicorn	Bicorn
+bicornate	bicornate
+bicorne	bicorne
+bicorned	có răng cưa
+by-corner	từng góc
+bicornes	bicornes
+bicornous	lưỡng tính
+bicornuate	lưỡng lự
+bicornuous	lưỡng tính
+bicornute	bicornute
+bicorporal	bi-corporal
+bicorporate	bicorporate
+bicorporeal	bicorporeal
+bicostate	bicostate
+bicrenate	bicrenate
+bicrescentic	lưỡng tính
+bicrofarad	bicrofarad
+bicron	bicron
+bicrons	bicron
+bicrural	lưỡng tính
+BICS	BICS
+bicuculline	bicuculline
+bicultural	bicultural
+biculturalism	chủ nghĩa văn hóa
+bicursal	bicursal
+bicuspid	bicuspid
+bicuspidal	bicuspidal
+bicuspidate	bicuspidate
+bicuspids	bicuspids
+BID	BID
+Bida	Bida
+bid-a-bid	giá thầu thầu
+bidactyl	bidactyl
+bidactyle	bidactyle
+bidactylous	bidactylous
+by-day	theo ngày
+bid-ale	đấu thầu
+bidar	bidar
+bidarka	giá thầu
+bidarkas	bidark
+bidarkee	bidarkee
+bidarkees	đúc
+Bidault	Bidault
+bidcock	bidcock
+biddability	tính khả thi
+biddable	có giá trị
+biddableness	biddableness
+biddably	biddably
+biddance	biddance
+Biddeford	Biddeford
+Biddelian	Biddelian
+bidden	cầu nguyện
+bidder	nhà thầu
+biddery	biddery
+bidders	nhà thầu
+Biddy	Biddy
+biddy-bid	biddy-bid
+biddy-biddy	Biddy-Biddy
+Biddick	Biddick
+Biddie	Biddie
+biddies	biddies
+bidding	đấu thầu
+biddings	biddings
+Biddle	Biddle
+Biddulphia	Biddulphia
+Biddulphiaceae	Biddulphiaceae
+bide	cách
+dwarfed	lùn
+dwarfer	người lùn
+dwarfest	lùn lùn
+dwarfy	Lùn
+dwarfing	lùn
+dwarfish	lùn
+dwarfishly	lúng túng
+dwarfishness	lúng túng
+dwarfism	lùn
+dwarfisms	lùn
+dwarflike	lùn
+dwarfling	Lùn lùn
+dwarfness	lùn
+dwarfs	người lùn
+dwarves	người lùn
+DWB	DWB
+Dweck	Dweck
+dweeble	dweeble
+dwell	trú ngụ
+dwelled	trú ngụ
+dweller	người lùn
+dwellers	cư dân
+dwelling	trú ngụ
+dwellings	nhà ở
+dwells	ngự nhà
+dwelt	cư ngụ
+DWI	DWI
+Dwyer	Dwyer
+Dwight	Dwight
+Dwyka	Dwyka
+DWIM	DWIM
+dwindle	làm suy nhược
+dwindled	suy yếu
+dwindlement	suy nhược
+dwindles	dwindles
+dwindling	suy yếu
+dwine	dwine
+dwined	ở lại
+dwines	dwines
+dwining	làm suy yếu
+Dwinnell	Dwinnell
+Dworak	cận thần
+earners	người có thu nhập
+earnest	nghiêm trang
+earnestful	nghiêm túc
+earnestly	tha thiết
+earnestness	sự nghiêm túc
+earnestnesses	sự nghiêm túc
+earnest-penny	kiếm tiền-penny
+earnests	kiếm tiền
+earnful	kiếm tiền
+earnie	người kiếm tiền
+earning	thu nhập
+earnings	thu nhập
+earns	kiếm được
+earock	earock
+EAROM	EAROM
+Earp	Earp
+earphone	tai nghe
+earphones	tai nghe
+earpick	earpick
+earpiece	ống nghe
+earpieces	tai nghe
+ear-piercing	xỏ lỗ tai
+earplug	tai nghe
+earplugs	nút bịt tai
+earreach	tai
+ear-rending	xỏ lỗ tai
+ear-rent	cho thuê tai
+earring	bông tai
+ear-ring	bông tai
+earringed	bông tai
+earrings	Hoa tai
+ears	đôi tai
+earscrew	bông tai
+earsh	Nhân vật
+earshell	vỏ tai
+earshot	phát lại
+earshots	tai nghe
+earsore	tai nghe
+earsplitting	tách tai
+ear-splitting	sự chia tách tai
+earspool	tai nghe
+earstone	đá quý
+earstones	earstones
+eartab	eartab
+eartag	khuyên tai
+eartagged	bịt tai
+Earth	trái đất
+Eartha	Eartha
+earth-apple	trái đất táo
+earth-ball	trái đất
+earthboard	trái đất
+earth-board	trái đất
+earthborn	earthborn
+earth-born	sanh ra
+earthbound	trái đất
+earth-bound	trái đất
+earth-boundness	liên kết trái đất
+earthbred	thuộc về đất
+earth-convulsing	co giật trái đất
+earth-delving	-sự đào đất
+earth-destroying	phá hủy trái đất
+earth-devouring	ăn đất
+earth-din	Nửa ngày
+earthdrake	earthdrake
+earth-dwelling	đất ở
+earth-eating	ăn trái đất
+earthed	nối đất
+earthen	đất
+earth-engendered	được sinh ra trên trái đất
+earthenhearted	có trái đất
+earthenware	đồ đất nung
+earthenwares	earthenwares
+earthfall	trái đất
+earthfast	trái đất
+earth-fed	ăn đất
+earthgall	earthgall
+earth-god	trái đất thần
+earth-goddess	nữ thần đất
+earthgrubber	người làm đất
+earth-homing	trái đất

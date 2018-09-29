@@ -148,12 +148,12 @@ public class Trie {
             }
             tree = tree.children[charToInt];
         }
-        if (tree.containID == null) {
-            canFindWord = false;
-        }
-//        if(canFindWord == false){
-//            return results;
-//        }
+        // if (tree.containID == null) {
+        //     canFindWord = false;
+        // }
+       if(canFindWord == false){
+           return results;
+       }
         FindMore next = new FindMore();
         results = next.commonPrefix(tree, maxNext);
         return results;

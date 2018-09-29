@@ -25,13 +25,13 @@
                <columnResizePolicy>
                   <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy></JFXTreeTableView>
-            <JFXTextArea fx:id="textArea" editable="false" layoutX="182.0" layoutY="151.0" prefHeight="128.0" prefWidth="248.0" promptText="Vietnamese">
+            <JFXTextArea fx:id="textArea" editable="false" layoutX="182.0" layoutY="151.0" prefHeight="128.0" prefWidth="248.0" promptText="Vietnamese" unFocusColor="#609ac9">
                <font>
-                  <Font name="Monaco" size="13.0" />
+                  <Font name="Monaco" size="15.0" />
                </font></JFXTextArea>
             <JFXTextField fx:id="textField" alignment="TOP_LEFT" depthTest="ENABLE" focusColor="#6c8ff8" focusTraversable="false" labelFloat="true" layoutX="182.0" layoutY="21.0" prefHeight="113.0" prefWidth="237.0" promptText="English" unFocusColor="#c94a4a">
                <font>
-                  <Font name="Monaco" size="13.0" />
+                  <Font name="Monaco" size="15.0" />
                </font>
             </JFXTextField>
          </children>

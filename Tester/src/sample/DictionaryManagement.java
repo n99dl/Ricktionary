@@ -15,7 +15,7 @@ public class DictionaryManagement {
 
     public void insertFromFile() {
         int i = -1;
-        try (Scanner scanner = new Scanner(new File("C:\\Users\\Admin\\IdeaProjects\\Tester\\src\\sample\\Dictionaries.txt"));) {
+        try (Scanner scanner = new Scanner(new File("./src/sample/Dictionaries.txt"));) {
             while (scanner.hasNextLine()) {
                 i++;
                 String allLine;
