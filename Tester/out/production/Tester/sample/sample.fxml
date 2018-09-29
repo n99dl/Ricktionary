@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="390.0" prefWidth="615.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="302.0" prefWidth="430.0" GridPane.rowIndex="1">
+         <children>
+            <JFXTreeTableView fx:id="treeView" layoutX="14.0" layoutY="14.0" prefHeight="271.0" prefWidth="150.0" stylesheets="@main.css">
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy></JFXTreeTableView>
+            <JFXTextArea fx:id="textArea" editable="false" layoutX="182.0" layoutY="151.0" prefHeight="128.0" prefWidth="248.0" promptText="Vietnamese">
+               <font>
+                  <Font name="Monaco" size="13.0" />
+               </font></JFXTextArea>
+            <JFXTextField fx:id="textField" alignment="TOP_LEFT" depthTest="ENABLE" focusColor="#6c8ff8" focusTraversable="false" labelFloat="true" layoutX="182.0" layoutY="21.0" prefHeight="113.0" prefWidth="237.0" promptText="English" unFocusColor="#c94a4a">
+               <font>
+                  <Font name="Monaco" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
