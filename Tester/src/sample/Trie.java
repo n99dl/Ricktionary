@@ -1,8 +1,9 @@
 package sample;
 
 import java.util.ArrayList;
-import java.util.Queue;
-import java.util.LinkedList;
+import java.math.*;
+
+
 
 public class Trie {
     private static final int ALPHABET_SIZE = 127;
@@ -124,6 +125,46 @@ public class Trie {
             return trimmedRes;
         }
 
+        public int getLCS(String a, String b){
+            int n = a.length();
+            int m = b.length();
+            int[][] memo = new int[n + 5][m + 5];
+            for(int i = n - 1; i >= 0; i--){
+                for(int j = m - 1; j >= 0; j--){
+                    if(a.charAt(i) == b.charAt(j)){
+                        memo[i][j] = Math.max(memo[i][j], memo[i + 1][j + 1] + 1);
+                    }
+                    memo[i][j] = Math.max(memo[i][j], memo[i + 1][j]);
+                    memo[i][j] = Math.max(memo[i][j], memo[i][j + 1]);
+                }
+            }
+            return memo[0][0];
+        }
+
+        public ArrayList<Word> longestCommonSub(Node prefixNode, String word, int maxNext){
+            getWord(prefixNode);
+            int[] valueLCS = new int[results.size()];
+            int maxValue = 0;
+            int i = 0;
+            for(Word thisWord : results){
+                valueLCS[i] = getLCS(word, thisWord.getWord_target().getValue().toLowerCase());
+                maxValue = Math.max(maxValue, valueLCS[i]);
+                // System.out.println(word + " " + thisWord.getWord_target().getValue().toLowerCase() + valueLCS[i]);
+                i++;
+            }
+            ArrayList<Word> trimmedRes = new ArrayList<>();
+            for(i = 0; i < results.size(); i++){
+                // System.out.println(valueLCS[i] + " " + maxValue);
+                if(valueLCS[i] == maxValue){
+                    trimmedRes.add(results.get(i));
+                    maxNext--;
+                    if(maxNext == 0){
+                        break;
+                    }
+                }
+            }
+            return trimmedRes;
+        }
     }
 
     /**
@@ -148,14 +189,15 @@ public class Trie {
             }
             tree = tree.children[charToInt];
         }
-        // if (tree.containID == null) {
-        //     canFindWord = false;
-        // }
-       if(canFindWord == false){
-           return results;
-       }
         FindMore next = new FindMore();
-        results = next.commonPrefix(tree, maxNext);
+        if(canFindWord == false){
+            results = next.longestCommonSub(tree, word, 5);
+//            System.out.println(results.size());
+            Word empty = new Word("-1", "-1", -1);
+            results.add(0, empty);
+        } else{
+            results = next.commonPrefix(tree, maxNext);
+        }
         return results;
     }
 }

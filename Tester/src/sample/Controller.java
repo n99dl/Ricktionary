@@ -4,13 +4,14 @@
 
 package sample;
 
-import com.jfoenix.controls.JFXTreeTableColumn;
-import com.jfoenix.controls.JFXTreeTableView;
+import com.jfoenix.controls.*;
+
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
-import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -20,16 +21,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
-import com.jfoenix.controls.JFXTextArea;
 import javafx.scene.input.MouseEvent;
-import com.jfoenix.controls.JFXTextField;
 
 public class Controller {
 
@@ -41,6 +43,9 @@ public class Controller {
 
     @FXML
     private JFXTextField textField;
+
+    @FXML
+    private JFXPopup popup;
 
     @FXML // fx:id="treeView"
     private JFXTreeTableView<Word> treeView; // Value injected by FXMLLoader
@@ -112,17 +117,13 @@ public class Controller {
                 if (ke.getCode().equals(KeyCode.ENTER))
                 {
                     String input = textField.getText();
-                    Word wordFound = dicMan.dictionaryLookup(input);
-                    if (wordFound == null){
-                        textArea.setText("Not found!");
+                    ArrayList<Word> listWords = dicMan.dictionaryLookup(input);
+                    if (listWords.get(0).getId() == -1){
+                        initPopup(listWords.subList(1, (listWords.size())));
+                        popupShow();
                     } else{
-                        treeView.getSelectionModel().select(wordFound.getId());
-                        treeView.scrollTo(wordFound.getId());
-                        TreeItem<Word> item = treeView.getSelectionModel().getSelectedItem();
-                        System.out.println("Selected Text : " + item.getValue().getWord_explaint().getValue());
-                        textArea.setDisable(false);
-                        textArea.setText(item.getValue().getWord_explaint().getValue());
-                        textField.setText(item.getValue().getWord_target().getValue());
+                        Word wordFound = listWords.get(0);
+                        setSelectionText(wordFound);
                     }
                 }
             }
@@ -130,40 +131,49 @@ public class Controller {
 
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
             String input = textField.getText();
-            Word wordFound = dicMan.dictionaryLookup(input);
-            if (wordFound != null){
+            ArrayList<Word> wordLists = dicMan.dictionaryLookup(input);
+            Word wordFound = wordLists.get(0);
+            if (wordFound.getId() != -1){
                 treeView.scrollTo(wordFound.getId());
             }
         });
-//        textField.focusedProperty().addListener(new ChangeListener<Boolean>() {
-//            @Override
-//            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-////                if(newValue){
-//                    String input = textField.getText();
-//                    Word wordFound = dicMan.dictionaryLookup(input);
-//                    if (wordFound == null){
-//                        textArea.setText("Not found!");
-//                    } else{
-//                        treeView.getSelectionModel().select(wordFound.getId());
-//                        treeView.scrollTo(wordFound.getId());
-//                        TreeItem<Word> item = treeView.getSelectionModel().getSelectedItem();
-//                        System.out.println("Selected Text : " + item.getValue().getWord_explaint().getValue());
-//                        textArea.setDisable(false);
-//                        textArea.setText(item.getValue().getWord_explaint().getValue());
-//                    }
-//                }
-////            }
-//        });
     }
 
-//    class Word extends RecursiveTreeObject<Word> {
-//
-//        StringProperty word;
-//        StringProperty explain;
-//
-//        public Word(String word, String explain) {
-//            this.word = new SimpleStringProperty(word);
-//            this.explain = new SimpleStringProperty(explain);
-//        }
-//    }
+    private void popupShow() {
+        popup.show(textField, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT);
+    }
+
+    private void setSelectionText(Word word){
+        treeView.getSelectionModel().select(word.getId());
+        treeView.scrollTo(word.getId());
+        TreeItem<Word> item = treeView.getSelectionModel().getSelectedItem();
+        System.out.println("Selected Text : " + item.getValue().getWord_explaint().getValue());
+        textArea.setDisable(false);
+        textArea.setText(item.getValue().getWord_explaint().getValue());
+        textField.setText(item.getValue().getWord_target().getValue());
+    }
+
+    private void initPopup(List<Word> listOfWords) {
+        JFXButton label = new JFXButton("Did you mean...");
+        label.setDisable(true);
+        JFXListView<JFXButton> list = new JFXListView<>();
+        list.getItems().add(label);
+        label.setPadding(new Insets(5));
+
+        for(Word word : listOfWords){
+            JFXButton bt = new JFXButton(word.getWord_target().getValue());
+            bt.setPadding(new Insets(5));
+            list.getItems().add(bt);
+            bt.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    setSelectionText(word);
+                    popup.hide();
+                }
+            });
+        }
+
+        popup = new JFXPopup(list);
+
+    }
 }

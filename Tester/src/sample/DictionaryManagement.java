@@ -28,13 +28,9 @@ public class DictionaryManagement {
         }
     }
 
-    public Word dictionaryLookup(String keyWord) {
+    public ArrayList<Word> dictionaryLookup(String keyWord) {
         ArrayList<Word> word = dictionary.searchInTree(keyWord, 1);
-        if (word.size() == 0) {
-            return null;
-        } else {
-            return word.get(0);
-        }
+        return word;
     }
 
     public ArrayList<Word> getWordList() {
