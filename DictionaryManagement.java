@@ -5,68 +5,50 @@ import java.util.Scanner;
 import java.util.Collections;
 
 public class DictionaryManagement {
-    private Dictionary dictionary;
+    private Trie dictionary;
 
     public DictionaryManagement(){
-        dictionary = new Dictionary();
-    }
-
-    public void insertFromCommandLine() {
-        int numberOfWord = 0;
-        try (Scanner scanner = new Scanner(System.in);) {
-            numberOfWord = scanner.nextInt();
-            scanner.nextLine();
-            for (int i = 0; i < numberOfWord; i++) {
-                String word, explain;
-                word = scanner.nextLine();
-                explain = scanner.nextLine();
-                dictionary.insertWord(word,explain);
-            }
-        }
-    }
-
-    public void insertWordFromCommandLine(){
-        Scanner scanner = new Scanner(System.in);
-        String newWord = scanner.nextLine();
-        String newWordExplain = scanner.nextLine();
-        dictionary.insertWord(newWord, newWordExplain);
-    }
-
-    public void deleteWordFromCommandLine(){
-        Scanner scanner = new Scanner(System.in);
-        String newWord = scanner.nextLine();
+        dictionary = new Trie();
     }
 
     public void insertFromFile() {
         int i = -1;
-        ArrayList<Word> listWords = new ArrayList<>();
-        try (Scanner scanner = new Scanner(new File("dictionaries.txt"));) {
+        try (Scanner scanner = new Scanner(new File("./src/sample/Dictionaries.txt"));) {
             while (scanner.hasNextLine()) {
                 i++;
                 String allLine;
                 allLine = scanner.nextLine();
                 String[] wordsArray = allLine.split("\t");
-                listWords.add(new Word(wordsArray[0], wordsArray[1], i));
-                dictionary.insertWord(wordsArray[0], wordsArray[1]);
+//                System.out.println(wordsArray[0]);
+                dictionary.insertToTree(new Word(wordsArray[0], wordsArray[1], i));
             }
         } catch (FileNotFoundException e) {
         }
     }
 
-    public void sortWord(){
-        dictionary.sort();
+    public Word dictionaryLookup(String keyWord) {
+        ArrayList<Word> word = dictionary.searchInTree(keyWord, 1);
+        if (word.size() == 0) {
+            return null;
+        } else {
+            return word.get(0);
+        }
     }
 
-    public void dictionaryLookup() {
-        String keyWord;
-        Scanner scanner = new Scanner(System.in);
-        keyWord = scanner.nextLine();
-        Word word = dictionary.lookupWord(keyWord);
-        word.print();
-        scanner.close();
+    public void dictionarySearch(String keuWord) {
+        ArrayList<Word> wordList = dictionary.searchInTree(keuWord,50);
+        if (wordList.isEmpty()) {
+            for (Word word : wordList)
+                word.print();
+        }
     }
 
     public ArrayList<Word> getWordList() {
-        return dictionary.getWordList();
+        ArrayList<Word> res = dictionary.getAllWords();
+        int i = 0;
+        for (Word word : res){
+            word.setId(i++);
+        }
+        return res;
     }
 }
