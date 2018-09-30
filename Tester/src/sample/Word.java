@@ -5,12 +5,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Word extends RecursiveTreeObject<Word> {
-    private String word_target, word_explaint;
+    private String word_target, word_explain;
     private int id;
 
-    public Word(String word_target, String word_explaint, int id) {
+    public Word(String word_target, String word_explain, int id) {
         this.word_target = word_target;
-        this.word_explaint = word_explaint;
+        this.word_explain = word_explain;
         this.id = id;
     }
 
@@ -22,12 +22,12 @@ public class Word extends RecursiveTreeObject<Word> {
         this.word_target = word_target;
     }
 
-    public StringProperty getWord_explaint() {
-        return new SimpleStringProperty(this.word_explaint);
+    public StringProperty getWord_explain() {
+        return new SimpleStringProperty(this.word_explain);
     }
 
-    public void setWord_explaint(String word_explaint) {
-        this.word_explaint = word_explaint;
+    public void setWord_explain(String word_explain) {
+        this.word_explain = word_explain;
     }
 
     public int getId() {
@@ -39,6 +39,6 @@ public class Word extends RecursiveTreeObject<Word> {
     }
 
     public void print() {
-        System.out.println(this.id + "   " + this.word_target + "  " + this.word_explaint);
+        System.out.println(this.id + "   " + this.word_target + "  " + this.word_explain);
     }
 }

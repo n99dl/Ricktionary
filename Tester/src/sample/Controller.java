@@ -101,9 +101,9 @@ public class Controller {
                 if(mouseEvent.getClickCount() == 1)
                 {
                     TreeItem<Word> item = treeView.getSelectionModel().getSelectedItem();
-                    System.out.println("Selected Text : " + item.getValue().getWord_explaint().getValue());
+                    System.out.println("Selected Text : " + item.getValue().getWord_explain().getValue());
                     textArea.setDisable(false);
-                    textArea.setText(item.getValue().getWord_explaint().getValue());
+                    textArea.setText(item.getValue().getWord_explain().getValue());
                     textField.setText(item.getValue().getWord_target().getValue());
                 }
             }
@@ -147,9 +147,9 @@ public class Controller {
         treeView.getSelectionModel().select(word.getId());
         treeView.scrollTo(word.getId());
         TreeItem<Word> item = treeView.getSelectionModel().getSelectedItem();
-        System.out.println("Selected Text : " + item.getValue().getWord_explaint().getValue());
+        System.out.println("Selected Text : " + item.getValue().getWord_explain().getValue());
         textArea.setDisable(false);
-        textArea.setText(item.getValue().getWord_explaint().getValue());
+        textArea.setText(item.getValue().getWord_explain().getValue());
         textField.setText(item.getValue().getWord_target().getValue());
     }
 
