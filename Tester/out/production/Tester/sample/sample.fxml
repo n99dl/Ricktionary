@@ -1,40 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" prefHeight="390.0" prefWidth="615.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
+<StackPane fx:id="rootPane" prefHeight="667.0" prefWidth="666.0" stylesheets="@../../../../src/sample/main.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane prefHeight="302.0" prefWidth="430.0" GridPane.rowIndex="1">
-         <children>
-            <JFXTreeTableView fx:id="treeView" layoutX="14.0" layoutY="14.0" prefHeight="271.0" prefWidth="150.0" stylesheets="@main.css">
-               <columnResizePolicy>
-                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy></JFXTreeTableView>
-            <JFXTextArea fx:id="textArea" editable="false" layoutX="182.0" layoutY="151.0" prefHeight="128.0" prefWidth="248.0" promptText="Vietnamese" unFocusColor="#609ac9">
-               <font>
-                  <Font name="Monaco" size="15.0" />
-               </font></JFXTextArea>
-            <JFXTextField fx:id="textField" alignment="TOP_LEFT" depthTest="ENABLE" focusColor="#6c8ff8" focusTraversable="false" labelFloat="true" layoutX="182.0" layoutY="21.0" prefHeight="113.0" prefWidth="237.0" promptText="English" unFocusColor="#c94a4a">
-               <font>
-                  <Font name="Monaco" size="15.0" />
-               </font>
-            </JFXTextField>
-         </children>
-      </AnchorPane>
+      <JFXTabPane fx:id="tabPane" prefHeight="660.0" prefWidth="697.0">
+         <tabs>
+            <Tab closable="false" text="Search">
+               <content>
+                  <AnchorPane prefHeight="543.0" prefWidth="745.0" style="-fx-background-color: #D8E0EA;">
+                     <children>
+                        <Pane layoutX="3.0" prefHeight="601.0" prefWidth="238.0" style="-fx-background-color: #49566A;">
+                           <children>
+                              <JFXTreeTableView fx:id="treeView" focusTraversable="false" layoutX="1.0" layoutY="9.0" prefHeight="593.0" prefWidth="237.0" showRoot="false" style="-fx-background-color: transparent;" stylesheets="@main.css">
+                                 <columnResizePolicy>
+                                    <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </JFXTreeTableView>
+                              <JFXTextField fx:id="textField" depthTest="ENABLE" focusColor="#49566a" focusTraversable="false" labelFloat="true" layoutX="4.0" layoutY="8.0" prefHeight="40.0" prefWidth="229.0" promptText="Enter a word here ..." style="-fx-background-color: #D8E0EA; -fx-background-radius: 50px;" unFocusColor="#49566a">
+                                 <font>
+                                    <Font name="Leelawadee UI" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="12.0" right="12.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </children>
+                        </Pane>
+                        <JFXTextArea fx:id="textArea" editable="false" focusColor="#d8e0ea" layoutX="241.0" prefHeight="601.0" prefWidth="431.0" promptText="Welcome to Ricktionay " stylesheets="@main.css" unFocusColor="#d8e0ea">
+                           <font>
+                              <Font name="Leelawadee UI" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" top="20.0" />
+                           </padding>
+                        </JFXTextArea>
+                        <Line endX="79.0" endY="-19.0" fill="#49566a" layoutX="158.0" layoutY="82.0" startX="-154.0" startY="-19.0" stroke="#49566a" strokeWidth="8.0" />
+                        <ImageView fx:id="hisButton" fitHeight="25.0" fitWidth="24.0" layoutX="644.0" layoutY="2.0" onMouseClicked="#hisPopup" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../../Pictures/22406371_137263380232145_1377018998138110002_n%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="showTarget" focusColor="#d8e0ea" layoutX="252.0" layoutY="11.0" prefHeight="37.0" prefWidth="228.0" style="-fx-background-color: #FAEF66; -fx-background-radius: 80px; -fx-text-fill: #49566A;" text="fdsfasdfasdfasdfddndddddddd\ndd" unFocusColor="#d8e0ea" visible="false">
+                           <font>
+                              <Font name="Leelawadee UI Bold" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="14.0" right="12.0" top="5.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="showSound" focusColor="#d8e0ea" layoutX="252.0" layoutY="56.0" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #7A8AA0; -fx-background-radius: 150px; -fx-text-fill: #d8e0ea;" text="/fsadf/" unFocusColor="#d8e0ea" visible="false">
+                           <font>
+                              <Font name="Leelawadee UI Bold" size="12.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="14.0" right="12.0" top="5.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextArea fx:id="showExplain" editable="false" focusColor="#d8e0ea" layoutX="252.0" layoutY="91.0" maxHeight="509.0" prefHeight="509.0" prefWidth="407.0" style="-fx-background-color: #A4B7D0; -fx-background-radius: 15px; -fx-text-fill: #49566A;" text="fdsfasdfasdfasdfddndddddddd\ndd&#10;" unFocusColor="#d8e0ea" visible="false" wrapText="true">
+                           <font>
+                              <Font name="Leelawadee UI" size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="14.0" right="12.0" top="5.0" />
+                           </padding>
+                        </JFXTextArea>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add/Edit Word">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #D8E0EA;">
+                     <children>
+                        <JFXTextField fx:id="addTarget" focusColor="#006978" labelFloat="true" layoutX="37.0" layoutY="120.0" prefHeight="35.0" prefWidth="591.0" promptText="Word target" style="-fx-background-color: #49566A; -fx-text-fill: #D8E0EA; -fx-prompt-text-fill: #D8E0EA; -fx-background-radius: 10px; -fx-padding: 0px 10px 0px 10px;" unFocusColor="#d8e0ea">
+                           <font>
+                              <Font name="Calibri" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="addWord" layoutX="209.0" layoutY="431.0" onMouseClicked="#addNewWord" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #49566A; -fx-background-radius: 150px 150px 150px 150px;" text="Submit" textFill="#d8e0ea">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextArea fx:id="addExplain" focusColor="#006978" labelFloat="true" layoutX="38.0" layoutY="176.0" prefHeight="241.0" prefWidth="592.0" promptText="Word Explain" style="-fx-background-color: #49566A; -fx-text-fill: #D8E0EA; -fx-prompt-text-fill: #D8E0EA; -fx-background-radius: 10px; -fx-padding: 5px 10px 0px 10px;" text="\@Word_Target /pronun/&#10;Word_Explain" unFocusColor="#d8e0ea" wrapText="true">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXButton fx:id="resetChange" layoutX="334.0" layoutY="431.0" onMouseClicked="#resetChangeWord" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #49566A; -fx-background-radius: 150px 150px 150px 150px;" text="Reset" textFill="#d8e0ea">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Google Trans">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #D8E0EA;">
+                     <children>
+                        <JFXButton fx:id="googleButton" layoutX="270.0" layoutY="286.0" onMouseClicked="#resetChangeWord" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #49566A; -fx-background-radius: 150px 150px 150px 150px;" text="Translate" textFill="#d8e0ea">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextArea fx:id="googleTrans" focusColor="#006978" labelFloat="true" layoutX="37.0" layoutY="347.0" prefHeight="224.0" prefWidth="592.0" promptText="Translate" style="-fx-background-color: #49566A; -fx-text-fill: #D8E0EA; -fx-prompt-text-fill: #D8E0EA; -fx-background-radius: 10px; -fx-padding: 5px 10px 0px 10px;" unFocusColor="#d8e0ea" wrapText="true">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextArea fx:id="googleText" focusColor="#006978" labelFloat="true" layoutX="37.0" layoutY="37.0" prefHeight="224.0" prefWidth="592.0" promptText="Enter Text" style="-fx-background-color: #49566A; -fx-text-fill: #D8E0EA; -fx-prompt-text-fill: #D8E0EA; -fx-background-radius: 10px; -fx-padding: 5px 10px 0px 10px;" unFocusColor="#d8e0ea" wrapText="true">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </JFXTextArea>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
    </children>
-</GridPane>
+</StackPane>

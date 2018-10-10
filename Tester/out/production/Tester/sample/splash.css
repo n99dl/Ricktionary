@@ -1,0 +1,6 @@
+#pane{
+    -fx-background-image: url("splash.gif");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 600 300;
+    -fx-background-position: center center;
+}

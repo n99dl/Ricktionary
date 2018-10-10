@@ -178,7 +178,8 @@ public class Trie {
 
     public ArrayList<Word> searchInTree(String word, int maxNext) {
         word = word.toLowerCase();
-        ArrayList<Word> results = new ArrayList<>();
+//        System.out.println(word);
+        ArrayList<Word> results;
         Node tree = treeRoot;
         boolean canFindWord = true;
         for (int i = 0; i < word.length(); i++) {

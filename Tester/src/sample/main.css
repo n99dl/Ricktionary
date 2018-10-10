@@ -1,68 +1,54 @@
 .tree-table-view{
-    -fx-tree-table-color: rgba(0, 150, 0, 0.8);
-    -fx-tree-table-rippler-color : rgba(255, 0, 0, 0.9);
+    -fx-font-family: 'Leelawadee UI';
+    -fx-font-size : 14px;
+    -fx-border: 0px;
 }
+/* 
 .tree-table-view:focused .tree-table-row-cell:selected {
-    -fx-background-color: -fx-tree-table-color  ;
-    -fx-table-cell-border-color: -fx-tree-table-color;
-}
+    -fx-background-color: #64B5F6;
+    /* -fx-table-cell-border-color: -fx-tree-table-color; */
 
-.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+.tree-table-view .tree-table-row-cell{
+    -fx-padding: 1px;
+    -fx-background-color: #49566A;
     -fx-text-fill: white;
+    -fx-border-color: #49566A;
+}
+.tree-table-view .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: #49566A;
+    -fx-border: 0px;
+    -fx-background-color: #FAEF66;
 }
 
 .tree-table-view .jfx-rippler {
     -fx-rippler-fill: -fx-tree-table-rippler-color;
+    -fx-border-color: transparent;
 }
 
-.tree-table-view .column-header ,
-.tree-table-view .column-header-background,
-.tree-table-view .column-header-background .filler{
-    -fx-background-color:TRANSPARENT;
+.tree-table-view .column-header,
+.tree-table-view .column-header .filler,
+.tree-table-view .column-header-background .filler {
+    -fx-background-color: #49566A;
+    /* -fx-border: 5px; */
+    -fx-text-fill : white;
+    -fx-border-color: transparent;
 }
 
-.tree-table-view .column-header{
-    -fx-border-width : 0 1 0 1;
-    -fx-border-color: #F3F3F3;
-}
-
-.tree-table-view .column-header .label {
-    -fx-text-fill : #949494;
-    -fx-padding : 16 0 16 0 ;
-}
-
-.tree-table-view .column-header .arrow, .tree-table-view .column-header .sort-order-dot{
-    -fx-background-color : #949494;
-}
-
-.tree-table-view .column-header:last-visible {
-    -fx-border-width: 0 2 0 1;
-}
-
-.tree-table-view .column-header-background{
-    -fx-border-width : 0 0.0 1 0;
-    -fx-border-color:#F3F3F3;
-}
+/* .tree-table-view .column-header .arrow, .tree-table-view .column-header .sort-order-dot{
+    -fx-background-color : #F5F5F5;
+} */
 
 .tree-table-view .tree-table-cell{
-    -fx-border-width:0 0 0 0;
-    -fx-padding : 16 0 16 0 ;
-}
-
-.tree-table-view .column-overlay{
-    -fx-background-color: -fx-tree-table-color;
-}
-
-.tree-table-view .column-resize-line, .tree-table-view .column-drag-header{
-    -fx-background-color: -fx-tree-table-rippler-color;
-}
-
-.tree-table-view:focused {
-    -fx-background-color: -fx-tree-table-color,-fx-box-border,-fx-control-inner-background;
-    -fx-background-insets: -1.4, 0, 1;
-    -fx-background-radius: 1.4, 0, 0;
-    /*....*/
-    -fx-padding: 1; /* 0.083333em; */
+    /* -fx-border-width:0 0 0 0; */
+    -fx-text-fill: white;
+    -fx-background-color: #7A8AA0;
+    -fx-padding: 0px 20px 0px 20px;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-pref-height: 50px;
+    -fx-font-size: 13px;
+    -fx-background-radius: 50px;
+    /* -fx-background-height: 5px; */
 }
 
 .tree-table-row-cell > .tree-disclosure-node > .arrow {
@@ -70,6 +56,106 @@
     -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
     -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
 }
+
+.tree-table-view {
+    /* -fx-background-color: -fx-tree-table-color,-fx-box-border,-fx-control-inner-background;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+    /*....*/
+    /* -fx-padding: 1;  */ 
+    /* -fx-border-width: 0px; */
+}
+.tree-table-view .scroll-pane .corner {    
+    -fx-background-color: transparent ;
+    -fx-border: 0px;
+    -fx-border-color: transparent;
+}
 .tree-table-row-cell .jfx-text-field{
     -fx-focus-color: rgba(240,40,40);
+    -fx-border: 0px;
+}
+.tree-table-view .scroll-bar {
+    -fx-background-color: #49566A;
+    -fx-border: 0px;
+}
+
+.tree-table-view .scroll-bar:vertical {
+    -fx-background-color: #49566A;
+}
+
+.tree-table-view .scroll-bar:horizontal {
+    -fx-background-color: #49566A;
+}
+
+.tree-table-view .scroll-bar .thumb {
+    -fx-background-color:derive(#90A4AE, 50%);
+    /* -fx-border-radius: 0px; */
+}
+
+.tree-table-view .scroll-bar .thumb:hover {
+    -fx-background-color:derive(#90A4AE, 70%);
+    /* -fx-border-radius: 0px; */
+}
+
+.tree-table-view .increment-button:hover ,.tree-table-view .decrement-button:hover {
+    -fx-background-color: #49566A;
+}
+
+.tree-table-view .track  {
+    -fx-background-color: #49566A;
+}
+
+.tree-table-view{
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.text-area .scroll-bar {
+    -fx-background-color:  #A4B7D0;
+    -fx-width: 2px;
+    -fx-border: 0px;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-background-color:  #A4B7D0;
+    -fx-width: 2px;
+}
+
+.text-area .scroll-bar:horizontal {
+    -fx-background-color:  #A4B7D0;
+    -fx-width: 2px;
+}
+
+.text-area .scroll-bar .thumb {
+    -fx-background-color:derive(#90A4AE, 50%);
+    /* -fx-border-radius: 0px; */
+}
+
+.text-area .scroll-bar .thumb:hover {
+    -fx-background-color:derive(#90A4AE, 70%);
+    /* -fx-border-radius: 0px; */
+}
+
+/**/
+.tab{
+    -fx-pref-height: 60;
+    -fx-pref-width: 150;
+    -fx-background-color: #49566A;
+}
+.tab-header-background{
+    -fx-background-color: #49566A;
+}
+/**/
+.dialog-button {
+    -fx-background-color: #49566A;
+    -fx-background-radius: 150px;
+    -fx-text-fill: #d8e0ea;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Leelawadee UI';
+    -fx-font-weight: bold;
+}
+
+.dialog-head{
+    /* -fx-background-radius: 50px; */
+    -fx-font-size: 15px;
+    /* -fx-background-color: #d8e0ea; */
 }
