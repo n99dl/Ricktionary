@@ -1,0 +1,10 @@
+No	| English	|Vietnamese
+1	Bag		Cap xach
+2	Book		sach
+3	Hello		Xin Chào
+4	Hi		Xin Chào
+5	House		Ngôi Nhà
+6	lol		cuoi lon
+7	Orange		Qua Cam
+8	Pen		but
+9	Water		Nuoc
