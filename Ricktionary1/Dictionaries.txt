@@ -1,0 +1,8 @@
+Hello	Xin Chào
+Hi	Xin Chào
+House	Ngôi Nhà
+Orange  Qua Cam
+Bag	Cap xach
+Water	Nuoc
+Book	sach
+Pen	but
