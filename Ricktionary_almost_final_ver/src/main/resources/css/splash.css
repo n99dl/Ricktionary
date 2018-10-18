@@ -1,0 +1,6 @@
+#pane{
+    -fx-background-image: url("../drawable/splash.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 820 566;
+    -fx-background-position: center center;
+}
