@@ -51,12 +51,12 @@ public class GoogleAPITextToSpeech extends Thread {
             ByteString audioContents = response.getAudioContent();
 
             // Write the response to the output file    .
-//            try (OutputStream out = new FileOutputStream("src/main/resources/audio/output.mp3")) {
-            try (OutputStream out = new FileOutputStream("output.mp3")) {
+            try (OutputStream out = new FileOutputStream("src/main/resources/audio/output.mp3")) {
+//            try (OutputStream out = new FileOutputStream("output.mp3")) {
                 out.write(audioContents.toByteArray());
-                System.out.println("Audio content written to file \"output.mp3\"");
-//                File f = new File("src/main/resources/audio/output.mp3");
-              File f = new File("output.mp3");
+//                System.out.println("Audio content written to file \"output.mp3\"");
+                File f = new File("src/main/resources/audio/output.mp3");
+//              File f = new File("output.mp3");
                 Media media = new Media(f.toURI().toURL().toExternalForm());
                 MediaPlayer mp = new MediaPlayer(media);
                 mp.play();

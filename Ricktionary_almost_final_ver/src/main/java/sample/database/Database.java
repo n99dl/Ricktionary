@@ -19,8 +19,8 @@ public class Database {
             Class.forName("org.sqlite.JDBC");
 //            c = DriverManager.getConnection("jdbc:sqlite:sample.dict2.db");
 //            System.out.println(());
-            c = DriverManager.getConnection("jdbc:sqlite:dict2.db");
-//            c = DriverManager.getConnection("jdbc:sqlite:" + getClass().getResource("/database/dict2.db"));
+//            c = DriverManager.getConnection("jdbc:sqlite:dict2.db");
+            c = DriverManager.getConnection("jdbc:sqlite:" + getClass().getResource("/database/dict2.db"));
             stmt = c.createStatement();
             System.out.println("Opened database successfully");
         } catch (Exception e) {
